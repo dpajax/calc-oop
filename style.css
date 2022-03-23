@@ -1,0 +1,65 @@
+@import url('https://font.googleapis.com/css?family=Montserrat&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html,
+body{
+    height: 100%;
+}
+
+body{
+    display: grid;
+    place-content: center;
+}
+
+#app {
+    width: 400px;
+    max-width: 100%;
+    height: 750px;
+    display: grid;
+    grid-template-rows: 0.3fr 0.7fr;
+    background-color: #223344;
+    color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 1px 10px 15px #f15b5a;
+}
+
+.screen {
+    background-color: #2e335d;
+    counter-reset: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 20px;
+    font-size: 4.125rem;
+}
+
+.numpad {
+    background-color: #f15b5a;
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.numpad button {
+    background-color: inherit;
+    color: inherit;
+    border: none;
+    cursor: pointer;
+    font-size: 1.625rem;
+}
+.numpad button:nth-child(17) {
+    grid-column: 1 / 3;
+}
+.numpad button:last-child{
+    background-color: #e33d3d;
+}
+.numpad button :active {
+    transform: scale(0.8);
+}
